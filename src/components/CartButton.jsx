@@ -22,17 +22,8 @@ const CartButton = () => {
       setAuth(false)
     }
 
-    if(isAuth==true && count==0){
-      
-      return (
-        <>
-        <button className={styles.btn} onClick={handleCart}>Add To Cart</button>
-        </>
-      )
-    }
-    else
-    {
-      return (
+    if(count>0){
+       return (
       <>
       {/* count with - and  + button */}
     <div className={styles.btns}>
@@ -43,5 +34,10 @@ const CartButton = () => {
       </>
       )
     }
+    return (
+        <>
+        <button className={styles.btn} onClick={handleCart}>Add To Cart</button>
+        </>
+      )
   }
 export default CartButton
